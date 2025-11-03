@@ -7,16 +7,16 @@
 <link href="slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="slides_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
-<title>slides</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-<link rel="stylesheet" href="slides_files/libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="slides_files/libs/revealjs/dist/reveal.css">
-<style>
+<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.4.551">
+
+  <title>slides</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/reveal.css">
+  <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -94,12 +94,12 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto.css">
-<link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
+  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto.css">
+  <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
 
   .callout {
     margin-top: 1em;
@@ -297,7 +297,7 @@
   }
 
   </style>
-<style type="text/css">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -384,14 +384,17 @@
       margin-right: 0; 
     }
   </style>
-<script src="slides_files/libs/kePrint-0.0.1/kePrint.js"></script><link href="slides_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+  <script src="slides_files/libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="slides_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
 
-<section class="slide level2"><p style="margin-bottom:8cm">
+<section class="slide level2">
+
+<p style="margin-bottom:8cm">
 </p>
 <h1>
 Análisis de eficiencia con R:
@@ -410,17 +413,17 @@ Dpto. Matemáticas para la Economía y la Empresa
 V. Coll
 </h3>
 <h4>
-</h4>
 <p>Dpto. Economía Aplicada</p>
-<h3>
+</h4><h3>
 Universitat de València
 </h3>
 <p><br></p>
 <h3>
-</h3>
 <p><svg aria-hidden="true" role="img" viewbox="0 0 496 512" style="height:1em;width:0.97em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:black;overflow:visible;position:relative;"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg> &nbsp; <a href="https://github.com/jthomasmock/arrow-dplyr">github.com/rbensua/Rupv</a></p>
 <p><img data-src="deaRsticker.png" class="absolute" style="top: 625px; left: 1300px; width: 350px; "></p>
-</section><section id="análisis-envolvente-de-datos-dea" class="slide level2"><h2>Análisis Envolvente de datos (DEA)</h2>
+</h3></section>
+<section id="análisis-envolvente-de-datos-dea" class="slide level2">
+<h2>Análisis Envolvente de datos (DEA)</h2>
 <div class="fragment" data-fragment-index="1" style="margin-bottom:-20px">
 <ul>
 <li>Metodología introducida por Charnes, Cooper y Rhodes (1978) y Banker, Charnes y Cooper (1984)</li>
@@ -436,15 +439,18 @@ Universitat de València
 <li>Las DMUs consumen una serie de Inputs para producir unos Outputs determinados</li>
 </ul>
 </div>
-<p><img data-src="CCR_1978.png" class="absolute fragment fade-up" style="top: 425px; left: -20px; width: 1250px; " data-fragment-index="2"><img data-src="BCC_1984.png" class="absolute fragment fade-up" style="top: 525px; left: 600px; width: 1250px; " data-fragment-index="3"></p>
-</section><section id="el-paquete-dear" class="slide level2"><h2>El paquete <code>deaR</code>
-</h2>
+<p><img data-src="CCR_1978.png" class="absolute fragment fade-up" style="top: 425px; left: -20px; width: 1250px; " data-fragment-index="2"> <img data-src="BCC_1984.png" class="absolute fragment fade-up" style="top: 525px; left: 600px; width: 1250px; " data-fragment-index="3"></p>
+</section>
+<section id="el-paquete-dear" class="slide level2">
+<h2>El paquete <code>deaR</code></h2>
 <ul>
 <li>Empezó como un conjunto de funciones para implementar CCR y BCC</li>
 <li>En dic. 2018 se publica en CRAN</li>
-<li>Desde entonces ha tenido más de 80.000 descargas <img data-src="deaR_downloads.png" class="absolute fragment fade-up" style="top: 325px; left: 200px; width: 1200px; ">
-</li>
-</ul></section><section id="estructura-del-paquete" class="slide level2"><h2>Estructura del paquete</h2>
+<li>Desde entonces ha tenido más de 80.000 descargas <img data-src="deaR_downloads.png" class="absolute fragment fade-up" style="top: 325px; left: 200px; width: 1200px; "></li>
+</ul>
+</section>
+<section id="estructura-del-paquete" class="slide level2">
+<h2>Estructura del paquete</h2>
 <ul>
 <li>Modelos clásicos
 <ul>
@@ -453,27 +459,26 @@ Universitat de València
 <li>Supereficiencia</li>
 <li>Eficiencia cruzada</li>
 <li>Datos temporales - índice de Malmquist</li>
-</ul>
-</li>
+</ul></li>
 <li>Modelos fuzzy
 <ul>
 <li>Modelo Guo - Tanaka (<em>Fuzzy Sets and Systems (2001), 119, 149–160.</em>)</li>
 <li>Metamodelo de Kao - Liu (<em>Fuzzy Sets and Systems (2000), 113, 427–437.</em>)</li>
 <li>Modelo Posibilístico Leon - Liern (<em>Fuzzy Sets and Systems (2003), 139, 407–419.</em>)</li>
-</ul>
-</li>
+</ul></li>
 <li>Inputs/Outputs no controlables, no discrecionales, no deseables</li>
 <li>Orientaciones: input / output / no-orientado</li>
 <li>Retornos a escala constantes, variables, generalizados…</li>
-</ul></section><section id="flujo-de-trabajo" class="slide level2"><h2>Flujo de trabajo</h2>
-
-<img data-src="flow.png" class="r-stretch"></section><section id="ejemplo" class="slide level2"><h2>Ejemplo</h2>
-<div class="panel-tabset">
-<ul id="tabset-1" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-1-1">Datos</a></li>
-<li><a href="#tabset-1-2">Crear <code>deadata</code> y correr el modelo</a></li>
-<li><a href="#tabset-1-3">Extraer resultados</a></li>
 </ul>
+</section>
+<section id="flujo-de-trabajo" class="slide level2">
+<h2>Flujo de trabajo</h2>
+
+<img data-src="flow.png" class="r-stretch"></section>
+<section id="ejemplo" class="slide level2">
+<h2>Ejemplo</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Datos</a></li><li><a href="#tabset-1-2">Crear <code>deadata</code> y correr el modelo</a></li><li><a href="#tabset-1-3">Extraer resultados</a></li><li><a href="#tabset-1-4">Algunas gráficas</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
@@ -482,14 +487,16 @@ Universitat de València
 <span id="cb1-3"><a href=""></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(Fortune500))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: left;">Company</th>
 <th style="text-align: right;">Assets</th>
 <th style="text-align: right;">Equity</th>
 <th style="text-align: right;">Employees</th>
 <th style="text-align: right;">Revenue</th>
 <th style="text-align: right;">Profit</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Mitsubishi</td>
@@ -546,9 +553,12 @@ Universitat de València
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a>datadea <span class="ot">&lt;-</span> <span class="fu">make_deadata</span>(Fortune500, <span class="at">ni =</span> <span class="dv">3</span>, <span class="at">no =</span> <span class="dv">2</span>)</span>
-<span id="cb2-2"><a href=""></a>results <span class="ot">&lt;-</span> <span class="fu">model_basic</span>(datadea, <span class="at">orientation =</span> <span class="st">"io"</span>, <span class="at">rts =</span> <span class="st">"crs"</span>)</span>
-<span id="cb2-3"><a href=""></a><span class="fu">efficiencies</span>(results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="co"># Creamos objeto dea data</span></span>
+<span id="cb2-2"><a href=""></a>datadea <span class="ot">&lt;-</span> <span class="fu">make_deadata</span>(Fortune500, <span class="at">ni =</span> <span class="dv">3</span>, <span class="at">no =</span> <span class="dv">2</span>)</span>
+<span id="cb2-3"><a href=""></a><span class="co"># Corremos el modelo (CCR, IO)</span></span>
+<span id="cb2-4"><a href=""></a>results <span class="ot">&lt;-</span> <span class="fu">model_basic</span>(datadea, <span class="at">orientation =</span> <span class="st">"io"</span>, <span class="at">rts =</span> <span class="st">"crs"</span>)</span>
+<span id="cb2-5"><a href=""></a><span class="co">#Obtenemos eficiencias</span></span>
+<span id="cb2-6"><a href=""></a><span class="fu">efficiencies</span>(results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    Mitsubishi         Mitsui         Itochu General Motors       Sumitomo 
      0.6628317      1.0000000      1.0000000      1.0000000      1.0000000 
@@ -562,19 +572,18 @@ Universitat de València
 <div id="tabset-1-3">
 <div class="cell">
 <div class="cell-output-display">
+<div>
 <div style="border: 1px solid #ddd; padding: 0px; overflow-y: scroll; height:500px; ">
 <table class="table table-striped" data-quarto-postprocess="true" style="width: auto !important; margin-left: auto; margin-right: auto;">
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">DMU</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">efficiencies.DMU</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">efficiencies.eff</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">slacks.DMU</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">slacks.slack_input.Assets</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">slacks.slack_input.Equity</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">slacks.slack_input.Employees</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">slacks.slack_output.Revenue</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">slacks.slack_output.Profit</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">lambdas.DMU</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">lambdas.Mitsubishi</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">lambdas.Mitsui</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">lambdas.Itochu</th>
@@ -590,668 +599,576 @@ Universitat de València
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">lambdas.Nippon.LI</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">lambdas.Nippon.T.T</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">lambdas.AT.T</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">targets.DMU</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">targets.Assets</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">targets.Equity</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">targets.Employees</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">targets.Revenue</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">targets.Profit</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">returns.DMU</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">returns.lambsum</th>
 <th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">returns.rts</th>
-<th data-quarto-table-cell-role="th" style="text-align: left; position: sticky; top: 0; background-color: #FFFFFF;">references.DMU</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">references.Exxon</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">references.General Motors</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">references.Itochu</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">references.Nippon LI</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">references.Sumitomo</th>
 <th data-quarto-table-cell-role="th" style="text-align: right; position: sticky; top: 0; background-color: #FFFFFF;">references.Walmart</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Mitsubishi</td>
-<td style="text-align: left;">Mitsubishi</td>
-<td style="text-align: right;">0.6628317</td>
-<td style="text-align: left;">Mitsubishi</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Mitsubishi</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.18428</td>
-<td style="text-align: right;">0.01669</td>
-<td style="text-align: right;">0.89331</td>
+<td style="text-align: right;">0.66</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00767</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.18</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.89</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Mitsubishi</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">60927.89</td>
-<td style="text-align: right;">7258.008</td>
+<td style="text-align: right;">7258.01</td>
 <td style="text-align: right;">23861.94</td>
 <td style="text-align: right;">184365.2</td>
 <td style="text-align: right;">346.2</td>
-<td style="text-align: left;">Mitsubishi</td>
-<td style="text-align: right;">1.10195</td>
+<td style="text-align: right;">1.10</td>
 <td style="text-align: left;">Decreasing</td>
-<td style="text-align: left;">Mitsubishi</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0167</td>
-<td style="text-align: right;">0.1843</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.8933</td>
-<td style="text-align: right;">0.0077</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.02</td>
+<td style="text-align: right;">0.18</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.89</td>
+<td style="text-align: right;">0.01</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Mitsui</td>
-<td style="text-align: left;">Mitsui</td>
-<td style="text-align: right;">1.0000000</td>
-<td style="text-align: left;">Mitsui</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">3.640000e-05</td>
-<td style="text-align: right;">0.0000000</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Mitsui</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">1</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Mitsui</td>
 <td style="text-align: right;">68770.90</td>
-<td style="text-align: right;">5553.900</td>
+<td style="text-align: right;">5553.90</td>
 <td style="text-align: right;">80000.00</td>
 <td style="text-align: right;">181518.7</td>
 <td style="text-align: right;">314.8</td>
-<td style="text-align: left;">Mitsui</td>
-<td style="text-align: right;">1.00000</td>
+<td style="text-align: right;">1.00</td>
 <td style="text-align: left;">Constant</td>
-<td style="text-align: left;">Mitsui</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Itochu</td>
-<td style="text-align: left;">Itochu</td>
-<td style="text-align: right;">1.0000000</td>
-<td style="text-align: left;">Itochu</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Itochu</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1.00000</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Itochu</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">65708.90</td>
-<td style="text-align: right;">4271.100</td>
+<td style="text-align: right;">4271.10</td>
 <td style="text-align: right;">7182.00</td>
 <td style="text-align: right;">169164.6</td>
 <td style="text-align: right;">121.2</td>
-<td style="text-align: left;">Itochu</td>
-<td style="text-align: right;">1.00000</td>
+<td style="text-align: right;">1.00</td>
 <td style="text-align: left;">Constant</td>
-<td style="text-align: left;">Itochu</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">1.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">General Motors</td>
-<td style="text-align: left;">General Motors</td>
-<td style="text-align: right;">1.0000000</td>
-<td style="text-align: left;">General Motors</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">3.400000e-06</td>
-<td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">General Motors</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">1.00000</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">General Motors</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">217123.40</td>
-<td style="text-align: right;">23345.500</td>
+<td style="text-align: right;">23345.50</td>
 <td style="text-align: right;">709000.00</td>
 <td style="text-align: right;">168828.6</td>
 <td style="text-align: right;">6880.7</td>
-<td style="text-align: left;">General Motors</td>
-<td style="text-align: right;">1.00000</td>
+<td style="text-align: right;">1.00</td>
 <td style="text-align: left;">Constant</td>
-<td style="text-align: left;">General Motors</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">1.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Sumitomo</td>
-<td style="text-align: left;">Sumitomo</td>
-<td style="text-align: right;">1.0000000</td>
-<td style="text-align: left;">Sumitomo</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.0000001</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Sumitomo</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">1.00000</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">1.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Sumitomo</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">50268.90</td>
-<td style="text-align: right;">6681.000</td>
+<td style="text-align: right;">6681.00</td>
 <td style="text-align: right;">6193.00</td>
 <td style="text-align: right;">167530.7</td>
 <td style="text-align: right;">210.5</td>
-<td style="text-align: left;">Sumitomo</td>
-<td style="text-align: right;">1.00000</td>
+<td style="text-align: right;">1.00</td>
 <td style="text-align: left;">Constant</td>
-<td style="text-align: left;">Sumitomo</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">1.0000</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Marubeni</td>
-<td style="text-align: left;">Marubeni</td>
-<td style="text-align: right;">0.9719666</td>
-<td style="text-align: left;">Marubeni</td>
-<td style="text-align: right;">1.288826e+04</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Marubeni</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.54736</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.40823</td>
+<td style="text-align: right;">0.97</td>
+<td style="text-align: right;">12888.26</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00067</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.55</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.41</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Marubeni</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">56548.35</td>
-<td style="text-align: right;">5092.230</td>
+<td style="text-align: right;">5092.23</td>
 <td style="text-align: right;">6514.12</td>
 <td style="text-align: right;">161057.4</td>
 <td style="text-align: right;">156.6</td>
-<td style="text-align: left;">Marubeni</td>
-<td style="text-align: right;">0.95626</td>
+<td style="text-align: right;">0.96</td>
 <td style="text-align: left;">Increasing</td>
-<td style="text-align: left;">Marubeni</td>
-<td style="text-align: right;">0.0007</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.5474</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.4082</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.55</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.41</td>
+<td style="text-align: right;">0.00</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Ford Motor</td>
-<td style="text-align: left;">Ford Motor</td>
-<td style="text-align: right;">0.7371663</td>
-<td style="text-align: left;">Ford Motor</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Ford Motor</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.25313</td>
-<td style="text-align: right;">0.30518</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.74</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.23315</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.20605</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">0.31</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Ford Motor</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.23</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.21</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">179340.03</td>
-<td style="text-align: right;">18095.221</td>
+<td style="text-align: right;">18095.22</td>
 <td style="text-align: right;">255789.34</td>
 <td style="text-align: right;">137137.0</td>
 <td style="text-align: right;">4139.0</td>
-<td style="text-align: left;">Ford Motor</td>
-<td style="text-align: right;">0.99751</td>
+<td style="text-align: right;">1.00</td>
 <td style="text-align: left;">Increasing</td>
-<td style="text-align: left;">Ford Motor</td>
-<td style="text-align: right;">0.2332</td>
-<td style="text-align: right;">0.3052</td>
-<td style="text-align: right;">0.2531</td>
-<td style="text-align: right;">0.2061</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.23</td>
+<td style="text-align: right;">0.31</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">0.21</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Toyota Motor</td>
-<td style="text-align: left;">Toyota Motor</td>
-<td style="text-align: right;">0.5245576</td>
-<td style="text-align: left;">Toyota Motor</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">7529.514</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Toyota Motor</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.38244</td>
+<td style="text-align: right;">0.52</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">7529.51</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.37131</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.06551</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.38</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Toyota Motor</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">55605.31</td>
-<td style="text-align: right;">18536.593</td>
+<td style="text-align: right;">18536.59</td>
 <td style="text-align: right;">77033.91</td>
 <td style="text-align: right;">111052.0</td>
 <td style="text-align: right;">2662.4</td>
-<td style="text-align: left;">Toyota Motor</td>
-<td style="text-align: right;">0.81926</td>
+<td style="text-align: right;">0.82</td>
 <td style="text-align: left;">Increasing</td>
-<td style="text-align: left;">Toyota Motor</td>
-<td style="text-align: right;">0.3713</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.3824</td>
-<td style="text-align: right;">0.0655</td>
+<td style="text-align: right;">0.37</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.38</td>
+<td style="text-align: right;">0.07</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Exxon</td>
-<td style="text-align: left;">Exxon</td>
-<td style="text-align: right;">1.0000000</td>
-<td style="text-align: left;">Exxon</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Exxon</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">1.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Exxon</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">91296.00</td>
-<td style="text-align: right;">40436.000</td>
+<td style="text-align: right;">40436.00</td>
 <td style="text-align: right;">82000.00</td>
 <td style="text-align: right;">110009.0</td>
 <td style="text-align: right;">6470.0</td>
-<td style="text-align: left;">Exxon</td>
-<td style="text-align: right;">1.00000</td>
+<td style="text-align: right;">1.00</td>
 <td style="text-align: left;">Constant</td>
-<td style="text-align: left;">Exxon</td>
-<td style="text-align: right;">1.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Shell Group</td>
-<td style="text-align: left;">Shell Group</td>
-<td style="text-align: right;">0.8414237</td>
-<td style="text-align: left;">Shell Group</td>
-<td style="text-align: right;">1.869266e+03</td>
-<td style="text-align: right;">6480.408</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">7564.7762597</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Shell Group</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.84</td>
+<td style="text-align: right;">1869.27</td>
+<td style="text-align: right;">6480.41</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">7564.78</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">1.06717</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Shell Group</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.07</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">97428.49</td>
-<td style="text-align: right;">43152.149</td>
+<td style="text-align: right;">43152.15</td>
 <td style="text-align: right;">87508.07</td>
 <td style="text-align: right;">117398.5</td>
 <td style="text-align: right;">6904.6</td>
-<td style="text-align: left;">Shell Group</td>
-<td style="text-align: right;">1.06717</td>
+<td style="text-align: right;">1.07</td>
 <td style="text-align: left;">Decreasing</td>
-<td style="text-align: left;">Shell Group</td>
-<td style="text-align: right;">1.0672</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">1.07</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Walmart</td>
-<td style="text-align: left;">Walmart</td>
-<td style="text-align: right;">1.0000000</td>
-<td style="text-align: left;">Walmart</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Walmart</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Walmart</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">37871.00</td>
-<td style="text-align: right;">14762.000</td>
+<td style="text-align: right;">14762.00</td>
 <td style="text-align: right;">675000.00</td>
 <td style="text-align: right;">93627.0</td>
 <td style="text-align: right;">2740.0</td>
-<td style="text-align: left;">Walmart</td>
-<td style="text-align: right;">1.00000</td>
+<td style="text-align: right;">1.00</td>
 <td style="text-align: left;">Constant</td>
-<td style="text-align: left;">Walmart</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">1.0000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">1.00</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Hitachi</td>
-<td style="text-align: left;">Hitachi</td>
-<td style="text-align: right;">0.3860573</td>
-<td style="text-align: left;">Hitachi</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">1089.654</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Hitachi</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.31247</td>
+<td style="text-align: right;">0.39</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">1089.65</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.14515</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.16930</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.31</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Hitachi</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.17</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">35370.91</td>
-<td style="text-align: right;">10456.238</td>
+<td style="text-align: right;">10456.24</td>
 <td style="text-align: right;">128113.87</td>
 <td style="text-align: right;">84167.1</td>
 <td style="text-align: right;">1468.8</td>
-<td style="text-align: left;">Hitachi</td>
-<td style="text-align: right;">0.62692</td>
+<td style="text-align: right;">0.63</td>
 <td style="text-align: left;">Increasing</td>
-<td style="text-align: left;">Hitachi</td>
-<td style="text-align: right;">0.1452</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.3125</td>
-<td style="text-align: right;">0.1693</td>
+<td style="text-align: right;">0.15</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.31</td>
+<td style="text-align: right;">0.17</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">Nippon LI</td>
-<td style="text-align: left;">Nippon LI</td>
-<td style="text-align: right;">1.0000000</td>
-<td style="text-align: left;">Nippon LI</td>
-<td style="text-align: right;">3.900000e-06</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">1.000000e-06</td>
-<td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Nippon LI</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1.00000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Nippon LI</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">364762.50</td>
-<td style="text-align: right;">2241.900</td>
+<td style="text-align: right;">2241.90</td>
 <td style="text-align: right;">89690.00</td>
 <td style="text-align: right;">83206.7</td>
 <td style="text-align: right;">2426.6</td>
-<td style="text-align: left;">Nippon LI</td>
-<td style="text-align: right;">1.00000</td>
+<td style="text-align: right;">1.00</td>
 <td style="text-align: left;">Constant</td>
-<td style="text-align: left;">Nippon LI</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">1.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">1.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Nippon T&amp;T</td>
-<td style="text-align: left;">Nippon T&amp;T</td>
-<td style="text-align: right;">0.3485779</td>
-<td style="text-align: left;">Nippon T&amp;T</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.000</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">Nippon T&amp;T</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.01247</td>
-<td style="text-align: right;">0.24699</td>
+<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.29101</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.06878</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.25</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">Nippon T&amp;T</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.29</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">44296.33</td>
-<td style="text-align: right;">14723.963</td>
+<td style="text-align: right;">14723.96</td>
 <td style="text-align: right;">80660.92</td>
 <td style="text-align: right;">81937.2</td>
 <td style="text-align: right;">2209.1</td>
-<td style="text-align: left;">Nippon T&amp;T</td>
-<td style="text-align: right;">0.61925</td>
+<td style="text-align: right;">0.62</td>
 <td style="text-align: left;">Increasing</td>
-<td style="text-align: left;">Nippon T&amp;T</td>
-<td style="text-align: right;">0.2910</td>
-<td style="text-align: right;">0.0125</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.2470</td>
-<td style="text-align: right;">0.0688</td>
+<td style="text-align: right;">0.29</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">0.07</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;">AT&amp;T</td>
-<td style="text-align: left;">AT&amp;T</td>
-<td style="text-align: right;">0.2703818</td>
-<td style="text-align: left;">AT&amp;T</td>
-<td style="text-align: right;">0.000000e+00</td>
-<td style="text-align: right;">1331.930</td>
-<td style="text-align: right;">6.800228e+04</td>
-<td style="text-align: right;">0.0000000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: left;">AT&amp;T</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0.46688</td>
+<td style="text-align: right;">0.27</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">1331.93</td>
+<td style="text-align: right;">68002.28</td>
+<td style="text-align: right;">0.00</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.01486</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0.00000</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.47</td>
 <td style="text-align: right;">0</td>
 <td style="text-align: right;">0</td>
-<td style="text-align: left;">AT&amp;T</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 <td style="text-align: right;">24032.61</td>
-<td style="text-align: right;">3338.645</td>
+<td style="text-align: right;">3338.64</td>
 <td style="text-align: right;">12922.98</td>
 <td style="text-align: right;">79609.0</td>
 <td style="text-align: right;">139.0</td>
-<td style="text-align: left;">AT&amp;T</td>
-<td style="text-align: right;">0.48174</td>
+<td style="text-align: right;">0.48</td>
 <td style="text-align: left;">Increasing</td>
-<td style="text-align: left;">AT&amp;T</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.0000</td>
-<td style="text-align: right;">0.4669</td>
-<td style="text-align: right;">0.0149</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">0.47</td>
+<td style="text-align: right;">0.01</td>
 </tr>
 </tbody>
 </table>
@@ -1261,519 +1178,126 @@ Universitat de València
 </div>
 </div>
 </div>
+<div id="tabset-1-4">
+<p><img data-src="graficas.png"></p>
 </div>
-</section><section id="shiny-dear" class="slide level2"><h2>Shiny deaR</h2>
+</div>
+</div>
+</section>
+<section id="shiny-dear" class="slide level2">
+<h2>Shiny deaR</h2>
 <div style="text-align: center; margin-top: 1em">
 <p><a href="https://rbensua.shinyapps.io/deaR" data-preview-link="true" style="text-align: center">Shiny deaR</a></p>
 </div>
-</section><section id="tabsets" class="slide level2 smaller scrollable" data-transition="slide"><h2>Tabsets</h2>
-<div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby">
-<li><a data-tabby-default="" href="#tabset-2-1">Plot</a></li>
-<li><a href="#tabset-2-2">Data</a></li>
+<iframe src="https://rbensua.shinyapps.io/deaR" width="500%" height="600px" style="border:none;" allowfullscreen="">
+</iframe>
+</section>
+<section id="el-paquete-sdear" class="slide level2">
+<h2>El paquete <code>SdeaR</code></h2>
+<div class="fragment" data-fragment-index="1" style="margin-bottom:-20px">
+<ul>
+<li>Extensión del paquete <code>deaR</code> a los modelos estocásticos</li>
 </ul>
-<div class="tab-content">
-<div id="tabset-2-1">
+</div>
+<div class="fragment" data-fragment-index="2" style="margin-bottom:-20px">
+<ul>
+<li>Está basado en (Cooper et al.&nbsp;2002) para los modelos radiales</li>
+</ul>
+</div>
+<div class="fragment" data-fragment-index="4" style="margin-bottom:-20px">
+<ul>
+<li>También hemos extendido los modelos estocásticos al caso direccional (Bolós, Benítez, Coll 2024)</li>
+</ul>
+</div>
+<p><img data-src="stoch_paper1.png" class="absolute fragment fade-up" style="top: 525px; left: -20px; width: 1250px; " data-fragment-index="3"> <img data-src="stoch_paper2.png" class="absolute fragment fade-up" style="top: 425px; left: 600px; width: 1250px; " data-fragment-index="5"></p>
+<div class="fragment" data-fragment-index="6" style="margin-bottom:-20px">
+<ul>
+<li>El flujo de trabajo es el mismo que en el paquete <code>deaR</code></li>
+</ul>
+</div>
+</section>
+<section id="ejemplo-1" class="slide level2">
+<h2>Ejemplo</h2>
+<ul>
+<li>Vamos a usar el mismo conjunto de datos <code>Fortune500</code></li>
+<li>Asumiremos ahora que la desv. típica de los 3 inputs son el 0.1% del valor de los inputs</li>
+</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb4-2"><a href=""></a><span class="fu">ggplot</span>(mtcars, <span class="fu">aes</span>(hp, mpg, <span class="at">color =</span> am)) <span class="sc">+</span></span>
-<span id="cb4-3"><a href=""></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb4-4"><a href=""></a>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"loess"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="slides_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
-</figure>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">library</span>(SdeaR)</span>
+<span id="cb4-2"><a href=""></a>var_input <span class="ot">&lt;-</span> <span class="fu">t</span>(Fortune500[,<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="fl">1e6</span>)</span>
+<span id="cb4-3"><a href=""></a>deadata_det <span class="ot">&lt;-</span> <span class="fu">make_deadata</span>(Fortune500, <span class="at">ni =</span> <span class="dv">3</span>, <span class="at">no =</span> <span class="dv">2</span>)</span>
+<span id="cb4-4"><a href=""></a>deadata_stoch <span class="ot">&lt;-</span> <span class="fu">make_deadata_stoch</span>(deadata_det, </span>
+<span id="cb4-5"><a href=""></a>                                    <span class="at">var_input =</span> var_input)</span>
+<span id="cb4-6"><a href=""></a>CCR_stoch <span class="ot">&lt;-</span> <span class="fu">modelstoch_radial</span>(deadata_stoch)</span>
+<span id="cb4-7"><a href=""></a><span class="fu">efficiencies</span>(CCR_stoch)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>    Mitsubishi.efficiency         Mitsui.efficiency         Itochu.efficiency 
+                 0.952345                  1.000000                  1.000000 
+General Motors.efficiency       Sumitomo.efficiency       Marubeni.efficiency 
+                 1.000006                  1.000015                  1.000000 
+    Ford Motor.efficiency   Toyota Motor.efficiency          Exxon.efficiency 
+                 0.999911                  0.948344                  1.000001 
+   Shell Group.efficiency        Walmart.efficiency        Hitachi.efficiency 
+                 0.999991                  1.000006                  0.968455 
+     Nippon LI.efficiency     Nippon T&amp;T.efficiency           AT&amp;T.efficiency 
+                 1.000000                  0.884175                  0.912742 </code></pre>
 </div>
 </div>
-</div>
-</div>
-<div id="tabset-2-2">
+<ul>
+<li>La eficiencia se incrementa debido a la incertidumbre en los datos</li>
+</ul>
+</section>
+<section id="el-paquete-deaci" class="slide level2">
+<h2>El paquete <code>deaCI</code></h2>
+<ul>
+<li>Disponible en github: <a href="https://github.com/vjbolos/deaCI">github.com/vjbolos/deaCI</a></li>
+<li>No hay inputs (todos son 1).</li>
+<li>Los outputs son indicadores compuestos con estructura jerárquica.</li>
+<li>Basado en (Shen et al.&nbsp;2013).</li>
+</ul>
+<p><img data-src="deaCI_paper.png" class="absolute fragment fade-up" style="top: 425px; left: 500px; width: 1250px; "></p>
+</section>
+<section id="ejemplo-2" class="slide level2">
+<h2>Ejemplo</h2>
+<ul>
+<li>Asume que los indicadores compuestos están definidos a partir de subindicadores</li>
+</ul>
+<p><img data-src="CI_multilayer.png" class="absolute fragment fade-up" style="top: 225px; left: 10px; width: 1500px; "></p>
+</section>
+<section id="ejemplo-3" class="slide level2">
+<h2>Ejemplo</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href=""></a>knitr<span class="sc">::</span><span class="fu">kable</span>(mtcars)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table style="width:100%;">
-<colgroup>
-<col style="width: 27%">
-<col style="width: 6%">
-<col style="width: 5%">
-<col style="width: 8%">
-<col style="width: 5%">
-<col style="width: 6%">
-<col style="width: 8%">
-<col style="width: 8%">
-<col style="width: 4%">
-<col style="width: 4%">
-<col style="width: 6%">
-<col style="width: 6%">
-</colgroup>
-<thead><tr class="header">
-<th style="text-align: left;"></th>
-<th style="text-align: right;">mpg</th>
-<th style="text-align: right;">cyl</th>
-<th style="text-align: right;">disp</th>
-<th style="text-align: right;">hp</th>
-<th style="text-align: right;">drat</th>
-<th style="text-align: right;">wt</th>
-<th style="text-align: right;">qsec</th>
-<th style="text-align: right;">vs</th>
-<th style="text-align: right;">am</th>
-<th style="text-align: right;">gear</th>
-<th style="text-align: right;">carb</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Mazda RX4</td>
-<td style="text-align: right;">21.0</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">160.0</td>
-<td style="text-align: right;">110</td>
-<td style="text-align: right;">3.90</td>
-<td style="text-align: right;">2.620</td>
-<td style="text-align: right;">16.46</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Mazda RX4 Wag</td>
-<td style="text-align: right;">21.0</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">160.0</td>
-<td style="text-align: right;">110</td>
-<td style="text-align: right;">3.90</td>
-<td style="text-align: right;">2.875</td>
-<td style="text-align: right;">17.02</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Datsun 710</td>
-<td style="text-align: right;">22.8</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">108.0</td>
-<td style="text-align: right;">93</td>
-<td style="text-align: right;">3.85</td>
-<td style="text-align: right;">2.320</td>
-<td style="text-align: right;">18.61</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Hornet 4 Drive</td>
-<td style="text-align: right;">21.4</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">258.0</td>
-<td style="text-align: right;">110</td>
-<td style="text-align: right;">3.08</td>
-<td style="text-align: right;">3.215</td>
-<td style="text-align: right;">19.44</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Hornet Sportabout</td>
-<td style="text-align: right;">18.7</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">360.0</td>
-<td style="text-align: right;">175</td>
-<td style="text-align: right;">3.15</td>
-<td style="text-align: right;">3.440</td>
-<td style="text-align: right;">17.02</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Valiant</td>
-<td style="text-align: right;">18.1</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">225.0</td>
-<td style="text-align: right;">105</td>
-<td style="text-align: right;">2.76</td>
-<td style="text-align: right;">3.460</td>
-<td style="text-align: right;">20.22</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Duster 360</td>
-<td style="text-align: right;">14.3</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">360.0</td>
-<td style="text-align: right;">245</td>
-<td style="text-align: right;">3.21</td>
-<td style="text-align: right;">3.570</td>
-<td style="text-align: right;">15.84</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Merc 240D</td>
-<td style="text-align: right;">24.4</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">146.7</td>
-<td style="text-align: right;">62</td>
-<td style="text-align: right;">3.69</td>
-<td style="text-align: right;">3.190</td>
-<td style="text-align: right;">20.00</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Merc 230</td>
-<td style="text-align: right;">22.8</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">140.8</td>
-<td style="text-align: right;">95</td>
-<td style="text-align: right;">3.92</td>
-<td style="text-align: right;">3.150</td>
-<td style="text-align: right;">22.90</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Merc 280</td>
-<td style="text-align: right;">19.2</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">167.6</td>
-<td style="text-align: right;">123</td>
-<td style="text-align: right;">3.92</td>
-<td style="text-align: right;">3.440</td>
-<td style="text-align: right;">18.30</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Merc 280C</td>
-<td style="text-align: right;">17.8</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">167.6</td>
-<td style="text-align: right;">123</td>
-<td style="text-align: right;">3.92</td>
-<td style="text-align: right;">3.440</td>
-<td style="text-align: right;">18.90</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Merc 450SE</td>
-<td style="text-align: right;">16.4</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">275.8</td>
-<td style="text-align: right;">180</td>
-<td style="text-align: right;">3.07</td>
-<td style="text-align: right;">4.070</td>
-<td style="text-align: right;">17.40</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Merc 450SL</td>
-<td style="text-align: right;">17.3</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">275.8</td>
-<td style="text-align: right;">180</td>
-<td style="text-align: right;">3.07</td>
-<td style="text-align: right;">3.730</td>
-<td style="text-align: right;">17.60</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">3</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Merc 450SLC</td>
-<td style="text-align: right;">15.2</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">275.8</td>
-<td style="text-align: right;">180</td>
-<td style="text-align: right;">3.07</td>
-<td style="text-align: right;">3.780</td>
-<td style="text-align: right;">18.00</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">3</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Cadillac Fleetwood</td>
-<td style="text-align: right;">10.4</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">472.0</td>
-<td style="text-align: right;">205</td>
-<td style="text-align: right;">2.93</td>
-<td style="text-align: right;">5.250</td>
-<td style="text-align: right;">17.98</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Lincoln Continental</td>
-<td style="text-align: right;">10.4</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">460.0</td>
-<td style="text-align: right;">215</td>
-<td style="text-align: right;">3.00</td>
-<td style="text-align: right;">5.424</td>
-<td style="text-align: right;">17.82</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Chrysler Imperial</td>
-<td style="text-align: right;">14.7</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">440.0</td>
-<td style="text-align: right;">230</td>
-<td style="text-align: right;">3.23</td>
-<td style="text-align: right;">5.345</td>
-<td style="text-align: right;">17.42</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Fiat 128</td>
-<td style="text-align: right;">32.4</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">78.7</td>
-<td style="text-align: right;">66</td>
-<td style="text-align: right;">4.08</td>
-<td style="text-align: right;">2.200</td>
-<td style="text-align: right;">19.47</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Honda Civic</td>
-<td style="text-align: right;">30.4</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">75.7</td>
-<td style="text-align: right;">52</td>
-<td style="text-align: right;">4.93</td>
-<td style="text-align: right;">1.615</td>
-<td style="text-align: right;">18.52</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Toyota Corolla</td>
-<td style="text-align: right;">33.9</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">71.1</td>
-<td style="text-align: right;">65</td>
-<td style="text-align: right;">4.22</td>
-<td style="text-align: right;">1.835</td>
-<td style="text-align: right;">19.90</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Toyota Corona</td>
-<td style="text-align: right;">21.5</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">120.1</td>
-<td style="text-align: right;">97</td>
-<td style="text-align: right;">3.70</td>
-<td style="text-align: right;">2.465</td>
-<td style="text-align: right;">20.01</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Dodge Challenger</td>
-<td style="text-align: right;">15.5</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">318.0</td>
-<td style="text-align: right;">150</td>
-<td style="text-align: right;">2.76</td>
-<td style="text-align: right;">3.520</td>
-<td style="text-align: right;">16.87</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">AMC Javelin</td>
-<td style="text-align: right;">15.2</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">304.0</td>
-<td style="text-align: right;">150</td>
-<td style="text-align: right;">3.15</td>
-<td style="text-align: right;">3.435</td>
-<td style="text-align: right;">17.30</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Camaro Z28</td>
-<td style="text-align: right;">13.3</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">350.0</td>
-<td style="text-align: right;">245</td>
-<td style="text-align: right;">3.73</td>
-<td style="text-align: right;">3.840</td>
-<td style="text-align: right;">15.41</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Pontiac Firebird</td>
-<td style="text-align: right;">19.2</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">400.0</td>
-<td style="text-align: right;">175</td>
-<td style="text-align: right;">3.08</td>
-<td style="text-align: right;">3.845</td>
-<td style="text-align: right;">17.05</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">3</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Fiat X1-9</td>
-<td style="text-align: right;">27.3</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">79.0</td>
-<td style="text-align: right;">66</td>
-<td style="text-align: right;">4.08</td>
-<td style="text-align: right;">1.935</td>
-<td style="text-align: right;">18.90</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">1</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Porsche 914-2</td>
-<td style="text-align: right;">26.0</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">120.3</td>
-<td style="text-align: right;">91</td>
-<td style="text-align: right;">4.43</td>
-<td style="text-align: right;">2.140</td>
-<td style="text-align: right;">16.70</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Lotus Europa</td>
-<td style="text-align: right;">30.4</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">95.1</td>
-<td style="text-align: right;">113</td>
-<td style="text-align: right;">3.77</td>
-<td style="text-align: right;">1.513</td>
-<td style="text-align: right;">16.90</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">2</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Ford Pantera L</td>
-<td style="text-align: right;">15.8</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">351.0</td>
-<td style="text-align: right;">264</td>
-<td style="text-align: right;">4.22</td>
-<td style="text-align: right;">3.170</td>
-<td style="text-align: right;">14.50</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">4</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Ferrari Dino</td>
-<td style="text-align: right;">19.7</td>
-<td style="text-align: right;">6</td>
-<td style="text-align: right;">145.0</td>
-<td style="text-align: right;">175</td>
-<td style="text-align: right;">3.62</td>
-<td style="text-align: right;">2.770</td>
-<td style="text-align: right;">15.50</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">6</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Maserati Bora</td>
-<td style="text-align: right;">15.0</td>
-<td style="text-align: right;">8</td>
-<td style="text-align: right;">301.0</td>
-<td style="text-align: right;">335</td>
-<td style="text-align: right;">3.54</td>
-<td style="text-align: right;">3.570</td>
-<td style="text-align: right;">14.60</td>
-<td style="text-align: right;">0</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">5</td>
-<td style="text-align: right;">8</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Volvo 142E</td>
-<td style="text-align: right;">21.4</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">121.0</td>
-<td style="text-align: right;">109</td>
-<td style="text-align: right;">4.11</td>
-<td style="text-align: right;">2.780</td>
-<td style="text-align: right;">18.60</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">1</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">2</td>
-</tr>
-</tbody>
-</table>
+<style type="text/css">
+.my_class1 {
+height: 600px;
+}
+</style>
 </div>
-</div>
-</div>
+<div class="cell my_class1">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r my_class1 number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">library</span>(deaCI)</span>
+<span id="cb6-2"><a href=""></a><span class="fu">data</span>(<span class="st">"Shen2013"</span>)</span>
+<span id="cb6-3"><a href=""></a>layer_list <span class="ot">&lt;-</span> <span class="fu">list</span>( <span class="co"># Definimos la jerarquía de indicadores</span></span>
+<span id="cb6-4"><a href=""></a>  <span class="at">layer2 =</span> <span class="fu">list</span>(</span>
+<span id="cb6-5"><a href=""></a>    <span class="at">I1 =</span> <span class="fu">c</span>(<span class="dv">1</span>L),</span>
+<span id="cb6-6"><a href=""></a>    <span class="at">I2 =</span> <span class="fu">c</span>(<span class="dv">2</span>L),</span>
+<span id="cb6-7"><a href=""></a>    <span class="at">Mean_Speed =</span> <span class="fu">c</span>(<span class="dv">3</span>L, <span class="dv">4</span>L, <span class="dv">5</span>L),</span>
+<span id="cb6-8"><a href=""></a>    <span class="at">Speed_Limit =</span> <span class="fu">c</span>(<span class="dv">6</span>L, <span class="dv">7</span>L, <span class="dv">8</span>L),</span>
+<span id="cb6-9"><a href=""></a>    <span class="at">Seat_Belt =</span> <span class="fu">c</span>(<span class="dv">9</span>L, <span class="dv">10</span>L),</span>
+<span id="cb6-10"><a href=""></a>    <span class="at">Child_Restraint =</span> <span class="fu">c</span>(<span class="dv">11</span>L)</span>
+<span id="cb6-11"><a href=""></a>  ),</span>
+<span id="cb6-12"><a href=""></a>  <span class="at">layer3 =</span> <span class="fu">list</span>(</span>
+<span id="cb6-13"><a href=""></a>    <span class="at">Alcohol =</span> <span class="fu">c</span>(<span class="dv">1</span>L, <span class="dv">2</span>L),</span>
+<span id="cb6-14"><a href=""></a>    <span class="at">Speed =</span> <span class="fu">c</span>(<span class="dv">3</span>L, <span class="dv">4</span>L),</span>
+<span id="cb6-15"><a href=""></a>    <span class="at">Protective_System =</span> <span class="fu">c</span>(<span class="dv">5</span>L, <span class="dv">6</span>L)</span>
+<span id="cb6-16"><a href=""></a>  )</span>
+<span id="cb6-17"><a href=""></a>)</span>
+<span id="cb6-18"><a href=""></a>result <span class="ot">&lt;-</span> <span class="fu">model_multilayer</span>(<span class="at">data_indicators =</span> Shen2013, <span class="at">layer_list =</span> layer_list)</span>
+<span id="cb6-19"><a href=""></a><span class="fu">CI</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>       AT        BE        FI        FR        HU        IE        LT        NL 
+0.9353244 0.8287176 0.9254533 0.8654247 0.7279373 0.8632608 0.8456677 1.0000000 
+       PL        PT        SI        SE        CH 
+0.8058592 0.8347257 0.6788238 1.0000000 1.0000000 </code></pre>
 </div>
 </div>
 <div class="quarto-auto-generated-content">
@@ -1782,10 +1306,26 @@ Universitat de València
 </div>
 </div>
 </section>
-</div>
+    </div>
   </div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="slides_files/libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="slides_files/libs/revealjs/plugin/quarto-support/support.js"></script><script src="slides_files/libs/revealjs/plugin/notes/notes.js"></script><script src="slides_files/libs/revealjs/plugin/search/search.js"></script><script src="slides_files/libs/revealjs/plugin/zoom/zoom.js"></script><script src="slides_files/libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="slides_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="slides_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="slides_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -1975,7 +1515,9 @@ Universitat de València
           RevealZoom
         ]
       });
-    </script><script>
+    </script>
+    
+    <script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
@@ -2010,7 +1552,9 @@ Universitat de València
         }
 
       })();
-    </script><script id="quarto-html-after-body" type="application/javascript">
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
         const mode = bsSheetEl.getAttribute("data-mode");
@@ -2086,6 +1630,24 @@ Universitat de València
         // clear code selection
         e.clearSelection();
       });
+        var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+        var mailtoRegex = new RegExp(/^mailto:/);
+          var filterRegex = new RegExp('/' + window.location.host + '/');
+        var isInternal = (href) => {
+            return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+        }
+        // Inspect non-navigation links and adorn them if external
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+        for (var i=0; i<links.length; i++) {
+          const link = links[i];
+          if (!isInternal(link.href)) {
+            // undo the damage that might have been done by quarto-nav.js in the case of
+            // links that we want to consider external
+            if (link.dataset.originalHref !== undefined) {
+              link.href = link.dataset.originalHref;
+            }
+          }
+        }
       function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
         const config = {
           allowHTML: true,
@@ -2122,7 +1684,11 @@ Universitat de València
           try { href = new URL(href).hash; } catch {}
           const id = href.replace(/^#\/?/, "");
           const note = window.document.getElementById(id);
-          return note.innerHTML;
+          if (note) {
+            return note.innerHTML;
+          } else {
+            return "";
+          }
         });
       }
       const findCites = (el) => {
@@ -2164,6 +1730,6 @@ Universitat de València
       }
     });
     </script>
-
+    
 
 </body></html>
