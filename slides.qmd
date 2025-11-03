@@ -1,0 +1,245 @@
+---
+format: 
+  revealjs:
+    slide-number: c/t
+    footer: "IV Congreso & XV Jornadas de Usuarios de R · 2025"
+    code-copy: true
+    center-title-slide: false
+highlight-style: a11y
+code-link: true
+height: 1080
+width: 1728
+execute: 
+  eval: true
+  echo: true
+---
+<p style="margin-bottom:8cm"> </p>
+<h1> Análisis de eficiencia con R:  </h1>
+
+<h2> paquetes `deaR`, `SdeaR` y `deaCI` </h2>
+
+<hr style="height:4px;border:none;color:#333;background-color:#333;">
+
+<h3> R. Benítez -- V. J. Bolós </h3>
+<h4> Dpto. Matemáticas para la Economía y la Empresa </h4>
+<h3> V. Coll </h3>
+<h4> Dpto. Economía Aplicada</h>
+
+<h3>Universitat de València</h3>
+<br>
+
+<h3> `r fontawesome::fa("github", "black")` &nbsp; [github.com/rbensua/Rupv](https://github.com/jthomasmock/arrow-dplyr)
+
+![](deaRsticker.png){.absolute top=625 left=1300 width="350"}
+
+
+
+## Análisis Envolvente de datos (DEA)
+
+:::{.fragment data-fragment-index="1" style="margin-bottom:-20px"}
+- Metodología introducida por Charnes, Cooper y Rhodes (1978) y Banker, Charnes y Cooper (1984)
+:::
+:::{.fragment data-fragment-index="4" style="margin-bottom:-20px"}
+- Compara la eficiencia relativa de Unidades de Toma de Decisiones (DMUs)
+:::
+:::{.fragment data-fragment-index="5" style="margin-bottom:-20px"}
+- Las DMUs consumen una serie de Inputs para producir unos Outputs determinados
+:::
+![](CCR_1978.png){.absolute top=425 left=-20 width="1250" .fragment .fade-up data-fragment-index="2"}
+![](BCC_1984.png){.absolute top=525 left=600 width="1250" .fragment .fade-up data-fragment-index="3"}
+
+
+
+
+
+
+
+## El paquete `deaR` 
+
+- Empezó como un conjunto de funciones para implementar CCR y BCC
+- En dic. 2018 se publica en CRAN
+- Desde entonces ha tenido más de 80.000 descargas
+![](deaR_downloads.png){.absolute top=325 left=200 width="1200" .fragment .fade-up}
+
+## Estructura del paquete
+
+- Modelos clásicos
+    - Radiales (CCR, BCC), multiplicativos, envolventes... 
+    - No radiales (aditivos, SBM, direccionales...)
+    - Supereficiencia
+    - Eficiencia cruzada
+    - Datos temporales - índice de Malmquist
+    
+- Modelos fuzzy
+    - Modelo Guo - Tanaka (*Fuzzy Sets and Systems (2001), 119, 149–160.*)
+    - Metamodelo de Kao - Liu (*Fuzzy Sets and Systems (2000), 113, 427–437.*)
+    - Modelo Posibilístico Leon - Liern (*Fuzzy Sets and Systems (2003), 139, 407–419.*)
+    
+- Inputs/Outputs no controlables, no discrecionales, no deseables
+- Orientaciones: input / output / no-orientado
+- Retornos a escala constantes, variables, generalizados...
+
+## Flujo de trabajo
+
+![](flow.png)
+
+
+## Ejemplo
+
+::: panel-tabset
+
+### Datos
+
+```{r}
+library(deaR)
+data(Fortune500)
+knitr::kable(head(Fortune500))
+```
+### Crear `deadata` y correr el modelo
+```{r}
+# Creamos objeto dea data
+datadea <- make_deadata(Fortune500, ni = 3, no = 2)
+# Corremos el modelo (CCR, IO)
+results <- model_basic(datadea, orientation = "io", rts = "crs")
+#Obtenemos eficiencias
+efficiencies(results)
+```
+### Extraer resultados
+```{r echo=FALSE}
+library(dplyr)
+res_sum <- summary(results)
+idx <- which(grepl("DMU", colnames(res_sum)))[-1]
+res_sum <- res_sum[,-idx]
+res_sum <- res_sum |>  mutate(across(where(is.numeric), round, 2))
+res_sum |> knitr::kable() |> kableExtra::kable_styling("striped", full_width = F) |> kableExtra::scroll_box(height="500px")
+```
+
+### Algunas gráficas
+![](graficas.png)
+
+
+:::
+
+
+
+## Shiny deaR
+
+::: {style="text-align: center; margin-top: 1em"}
+[Shiny deaR](https://rbensua.shinyapps.io/deaR){preview-link="true" style="text-align: center"}
+:::
+
+<iframe 
+  src="https://rbensua.shinyapps.io/deaR" 
+  width="500%" 
+  height="600px" 
+  style="border:none;"
+  allowfullscreen>
+</iframe>
+
+
+## El paquete `SdeaR`
+
+:::{.fragment data-fragment-index="1" style="margin-bottom:-20px"}
+- Extensión del paquete `deaR` a los modelos estocásticos
+:::
+
+:::{.fragment data-fragment-index="2" style="margin-bottom:-20px"}
+- Está basado en (Cooper et al. 2002) para los modelos radiales
+:::
+:::{.fragment data-fragment-index="4" style="margin-bottom:-20px"}
+- También hemos extendido los modelos estocásticos al caso direccional (Bolós, Benítez, Coll 2024)
+:::
+
+![](stoch_paper1.png){.absolute top=525 left=-20 width="1250" .fragment .fade-up data-fragment-index="3"}
+![](stoch_paper2.png){.absolute top=425 left=600 width="1250" .fragment .fade-up data-fragment-index="5"}
+
+:::{.fragment data-fragment-index="6" style="margin-bottom:-20px"}
+- El flujo de trabajo es el mismo que en el paquete `deaR`
+:::
+
+## Ejemplo
+
+- Vamos a usar el mismo conjunto de datos `Fortune500`
+- Asumiremos ahora que la desv. típica de los 3 inputs son el 0.1% del valor de los inputs
+
+```{r}
+#| cache: true
+#| message: false
+#| warning: false
+library(SdeaR)
+var_input <- t(Fortune500[,2:4]^2/1e6)
+deadata_det <- make_deadata(Fortune500, ni = 3, no = 2)
+deadata_stoch <- make_deadata_stoch(deadata_det, 
+                                    var_input = var_input)
+CCR_stoch <- modelstoch_radial(deadata_stoch)
+efficiencies(CCR_stoch)
+```
+
+- La eficiencia se incrementa debido a la incertidumbre en los datos
+
+
+## El paquete `deaCI`
+
+- Disponible en github: [github.com/vjbolos/deaCI](https://github.com/vjbolos/deaCI)
+- No hay inputs (todos son 1).
+- Los outputs son indicadores compuestos con estructura jerárquica.
+- Basado en (Shen et al. 2013).
+
+
+![](deaCI_paper.png){.absolute top=425 left=500 width="1250" .fragment .fade-up}
+
+## Ejemplo
+
+- Asume que los indicadores compuestos están definidos a partir de subindicadores
+
+![](CI_multilayer.png){.absolute left=10 top=225 width=1500 .fragment .fade-up}
+
+## Ejemplo
+```{css, echo=FALSE}
+.my_class1 {
+height: 600px;
+}
+```
+
+```{r}
+#| class-source: my_class1
+#| classes: my_class1
+library(deaCI)
+data("Shen2013")
+layer_list <- list( # Definimos la jerarquía de indicadores
+  layer2 = list(
+    I1 = c(1L),
+    I2 = c(2L),
+    Mean_Speed = c(3L, 4L, 5L),
+    Speed_Limit = c(6L, 7L, 8L),
+    Seat_Belt = c(9L, 10L),
+    Child_Restraint = c(11L)
+  ),
+  layer3 = list(
+    Alcohol = c(1L, 2L),
+    Speed = c(3L, 4L),
+    Protective_System = c(5L, 6L)
+  )
+)
+result <- model_multilayer(data_indicators = Shen2013, layer_list = layer_list)
+CI(result)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
