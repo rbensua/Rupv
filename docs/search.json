@@ -1,0 +1,79 @@
+[
+  {
+    "objectID": "slides.html#análisis-envolvente-de-datos-dea",
+    "href": "slides.html#análisis-envolvente-de-datos-dea",
+    "title": "",
+    "section": "Análisis Envolvente de datos (DEA)",
+    "text": "Análisis Envolvente de datos (DEA)\n\n\nMetodología introducida por Charnes, Cooper y Rhodes (1978) y Banker, Charnes y Cooper (1984)\n\n\n\n\nCompara la eficiencia relativa de Unidades de Toma de Decisiones (DMUs)\n\n\n\n\nLas DMUs consumen una serie de Inputs para producir unos Outputs determinados"
+  },
+  {
+    "objectID": "slides.html#el-paquete-dear",
+    "href": "slides.html#el-paquete-dear",
+    "title": "",
+    "section": "El paquete deaR",
+    "text": "El paquete deaR\n\nEmpezó como un conjunto de funciones para implementar CCR y BCC\nEn dic. 2018 se publica en CRAN\nDesde entonces ha tenido más de 80.000 descargas"
+  },
+  {
+    "objectID": "slides.html#estructura-del-paquete",
+    "href": "slides.html#estructura-del-paquete",
+    "title": "",
+    "section": "Estructura del paquete",
+    "text": "Estructura del paquete\n\nModelos clásicos\n\nRadiales (CCR, BCC), multiplicativos, envolventes…\nNo radiales (aditivos, SBM, direccionales…)\nSupereficiencia\nEficiencia cruzada\nDatos temporales - índice de Malmquist\n\nModelos fuzzy\n\nModelo Guo - Tanaka (Fuzzy Sets and Systems (2001), 119, 149–160.)\nMetamodelo de Kao - Liu (Fuzzy Sets and Systems (2000), 113, 427–437.)\nModelo Posibilístico Leon - Liern (Fuzzy Sets and Systems (2003), 139, 407–419.)\n\nInputs/Outputs no controlables, no discrecionales, no deseables\nOrientaciones: input / output / no-orientado\nRetornos a escala constantes, variables, generalizados…"
+  },
+  {
+    "objectID": "slides.html#flujo-de-trabajo",
+    "href": "slides.html#flujo-de-trabajo",
+    "title": "",
+    "section": "Flujo de trabajo",
+    "text": "Flujo de trabajo"
+  },
+  {
+    "objectID": "slides.html#ejemplo",
+    "href": "slides.html#ejemplo",
+    "title": "",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n\nDatosCrear deadata y correr el modeloExtraer resultadosAlgunas gráficas\n\n\n\nlibrary(deaR)\ndata(Fortune500)\nknitr::kable(head(Fortune500))\n\n\n\n\nCompany\nAssets\nEquity\nEmployees\nRevenue\nProfit\n\n\n\n\nMitsubishi\n91920.6\n10950.0\n36000\n184365.2\n346.2\n\n\nMitsui\n68770.9\n5553.9\n80000\n181518.7\n314.8\n\n\nItochu\n65708.9\n4271.1\n7182\n169164.6\n121.2\n\n\nGeneral Motors\n217123.4\n23345.5\n709000\n168828.6\n6880.7\n\n\nSumitomo\n50268.9\n6681.0\n6193\n167530.7\n210.5\n\n\nMarubeni\n71439.3\n5239.1\n6702\n161057.4\n156.6\n\n\n\n\n\n\n\n\n# Creamos objeto dea data\ndatadea &lt;- make_deadata(Fortune500, ni = 3, no = 2)\n# Corremos el modelo (CCR, IO)\nresults &lt;- model_basic(datadea, orientation = \"io\", rts = \"crs\")\n#Obtenemos eficiencias\nefficiencies(results)\n\n    Mitsubishi         Mitsui         Itochu General Motors       Sumitomo \n     0.6628317      1.0000000      1.0000000      1.0000000      1.0000000 \n      Marubeni     Ford Motor   Toyota Motor          Exxon    Shell Group \n     0.9719666      0.7371663      0.5245576      1.0000000      0.8414237 \n       Walmart        Hitachi      Nippon LI     Nippon T&T           AT&T \n     1.0000000      0.3860573      1.0000000      0.3485779      0.2703818 \n\n\n\n\n\n\n\n\n\n\n\nDMU\nefficiencies.eff\nslacks.slack_input.Assets\nslacks.slack_input.Equity\nslacks.slack_input.Employees\nslacks.slack_output.Revenue\nslacks.slack_output.Profit\nlambdas.Mitsubishi\nlambdas.Mitsui\nlambdas.Itochu\nlambdas.General.Motors\nlambdas.Sumitomo\nlambdas.Marubeni\nlambdas.Ford.Motor\nlambdas.Toyota.Motor\nlambdas.Exxon\nlambdas.Shell.Group\nlambdas.Walmart\nlambdas.Hitachi\nlambdas.Nippon.LI\nlambdas.Nippon.T.T\nlambdas.AT.T\ntargets.Assets\ntargets.Equity\ntargets.Employees\ntargets.Revenue\ntargets.Profit\nreturns.lambsum\nreturns.rts\nreferences.Exxon\nreferences.General Motors\nreferences.Itochu\nreferences.Nippon LI\nreferences.Sumitomo\nreferences.Walmart\n\n\n\n\nMitsubishi\n0.66\n0.00\n0.00\n0.00\n0.00\n0\n0\n0\n0.18\n0.02\n0.89\n0\n0\n0\n0.00\n0\n0.01\n0\n0.00\n0\n0\n60927.89\n7258.01\n23861.94\n184365.2\n346.2\n1.10\nDecreasing\n0.00\n0.02\n0.18\n0.00\n0.89\n0.01\n\n\nMitsui\n1.00\n0.00\n0.00\n0.00\n0.00\n0\n0\n1\n0.00\n0.00\n0.00\n0\n0\n0\n0.00\n0\n0.00\n0\n0.00\n0\n0\n68770.90\n5553.90\n80000.00\n181518.7\n314.8\n1.00\nConstant\n0.00\n0.00\n0.00\n0.00\n0.00\n0.00\n\n\nItochu\n1.00\n0.00\n0.00\n0.00\n0.00\n0\n0\n0\n1.00\n0.00\n0.00\n0\n0\n0\n0.00\n0\n0.00\n0\n0.00\n0\n0\n65708.90\n4271.10\n7182.00\n169164.6\n121.2\n1.00\nConstant\n0.00\n0.00\n1.00\n0.00\n0.00\n0.00\n\n\nGeneral Motors\n1.00\n0.00\n0.00\n0.00\n0.00\n0\n0\n0\n0.00\n1.00\n0.00\n0\n0\n0\n0.00\n0\n0.00\n0\n0.00\n0\n0\n217123.40\n23345.50\n709000.00\n168828.6\n6880.7\n1.00\nConstant\n0.00\n1.00\n0.00\n0.00\n0.00\n0.00\n\n\nSumitomo\n1.00\n0.00\n0.00\n0.00\n0.00\n0\n0\n0\n0.00\n0.00\n1.00\n0\n0\n0\n0.00\n0\n0.00\n0\n0.00\n0\n0\n50268.90\n6681.00\n6193.00\n167530.7\n210.5\n1.00\nConstant\n0.00\n0.00\n0.00\n0.00\n1.00\n0.00\n\n\nMarubeni\n0.97\n12888.26\n0.00\n0.00\n0.00\n0\n0\n0\n0.55\n0.00\n0.41\n0\n0\n0\n0.00\n0\n0.00\n0\n0.00\n0\n0\n56548.35\n5092.23\n6514.12\n161057.4\n156.6\n0.96\nIncreasing\n0.00\n0.00\n0.55\n0.00\n0.41\n0.00\n\n\nFord Motor\n0.74\n0.00\n0.00\n0.00\n0.00\n0\n0\n0\n0.25\n0.31\n0.00\n0\n0\n0\n0.23\n0\n0.00\n0\n0.21\n0\n0\n179340.03\n18095.22\n255789.34\n137137.0\n4139.0\n1.00\nIncreasing\n0.23\n0.31\n0.25\n0.21\n0.00\n0.00\n\n\nToyota Motor\n0.52\n0.00\n7529.51\n0.00\n0.00\n0\n0\n0\n0.00\n0.00\n0.38\n0\n0\n0\n0.37\n0\n0.07\n0\n0.00\n0\n0\n55605.31\n18536.59\n77033.91\n111052.0\n2662.4\n0.82\nIncreasing\n0.37\n0.00\n0.00\n0.00\n0.38\n0.07\n\n\nExxon\n1.00\n0.00\n0.00\n0.00\n0.00\n0\n0\n0\n0.00\n0.00\n0.00\n0\n0\n0\n1.00\n0\n0.00\n0\n0.00\n0\n0\n91296.00\n40436.00\n82000.00\n110009.0\n6470.0\n1.00\nConstant\n1.00\n0.00\n0.00\n0.00\n0.00\n0.00\n\n\nShell Group\n0.84\n1869.27\n6480.41\n0.00\n7564.78\n0\n0\n0\n0.00\n0.00\n0.00\n0\n0\n0\n1.07\n0\n0.00\n0\n0.00\n0\n0\n97428.49\n43152.15\n87508.07\n117398.5\n6904.6\n1.07\nDecreasing\n1.07\n0.00\n0.00\n0.00\n0.00\n0.00\n\n\nWalmart\n1.00\n0.00\n0.00\n0.00\n0.00\n0\n0\n0\n0.00\n0.00\n0.00\n0\n0\n0\n0.00\n0\n1.00\n0\n0.00\n0\n0\n37871.00\n14762.00\n675000.00\n93627.0\n2740.0\n1.00\nConstant\n0.00\n0.00\n0.00\n0.00\n0.00\n1.00\n\n\nHitachi\n0.39\n0.00\n1089.65\n0.00\n0.00\n0\n0\n0\n0.00\n0.00\n0.31\n0\n0\n0\n0.15\n0\n0.17\n0\n0.00\n0\n0\n35370.91\n10456.24\n128113.87\n84167.1\n1468.8\n0.63\nIncreasing\n0.15\n0.00\n0.00\n0.00\n0.31\n0.17\n\n\nNippon LI\n1.00\n0.00\n0.00\n0.00\n0.00\n0\n0\n0\n0.00\n0.00\n0.00\n0\n0\n0\n0.00\n0\n0.00\n0\n1.00\n0\n0\n364762.50\n2241.90\n89690.00\n83206.7\n2426.6\n1.00\nConstant\n0.00\n0.00\n0.00\n1.00\n0.00\n0.00\n\n\nNippon T&T\n0.35\n0.00\n0.00\n0.00\n0.00\n0\n0\n0\n0.00\n0.01\n0.25\n0\n0\n0\n0.29\n0\n0.07\n0\n0.00\n0\n0\n44296.33\n14723.96\n80660.92\n81937.2\n2209.1\n0.62\nIncreasing\n0.29\n0.01\n0.00\n0.00\n0.25\n0.07\n\n\nAT&T\n0.27\n0.00\n1331.93\n68002.28\n0.00\n0\n0\n0\n0.00\n0.00\n0.47\n0\n0\n0\n0.00\n0\n0.01\n0\n0.00\n0\n0\n24032.61\n3338.64\n12922.98\n79609.0\n139.0\n0.48\nIncreasing\n0.00\n0.00\n0.00\n0.00\n0.47\n0.01"
+  },
+  {
+    "objectID": "slides.html#shiny-dear",
+    "href": "slides.html#shiny-dear",
+    "title": "",
+    "section": "Shiny deaR",
+    "text": "Shiny deaR\n\nShiny deaR"
+  },
+  {
+    "objectID": "slides.html#el-paquete-sdear",
+    "href": "slides.html#el-paquete-sdear",
+    "title": "",
+    "section": "El paquete SdeaR",
+    "text": "El paquete SdeaR\n\n\nExtensión del paquete deaR a los modelos estocásticos\n\n\n\n\nEstá basado en (Cooper et al. 2002) para los modelos radiales\n\n\n\n\nTambién hemos extendido los modelos estocásticos al caso direccional (Bolós, Benítez, Coll 2024)\n\n\n \n\n\nEl flujo de trabajo es el mismo que en el paquete deaR"
+  },
+  {
+    "objectID": "slides.html#ejemplo-1",
+    "href": "slides.html#ejemplo-1",
+    "title": "",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n\nVamos a usar el mismo conjunto de datos Fortune500\nAsumiremos ahora que la desv. típica de los 3 inputs son el 0.1% del valor de los inputs\n\n\nlibrary(SdeaR)\nvar_input &lt;- t(Fortune500[,2:4]^2/1e6)\ndeadata_det &lt;- make_deadata(Fortune500, ni = 3, no = 2)\ndeadata_stoch &lt;- make_deadata_stoch(deadata_det, \n                                    var_input = var_input)\nCCR_stoch &lt;- modelstoch_radial(deadata_stoch)\nefficiencies(CCR_stoch)\n\n    Mitsubishi.efficiency         Mitsui.efficiency         Itochu.efficiency \n                 0.952345                  1.000000                  1.000000 \nGeneral Motors.efficiency       Sumitomo.efficiency       Marubeni.efficiency \n                 1.000006                  1.000015                  1.000000 \n    Ford Motor.efficiency   Toyota Motor.efficiency          Exxon.efficiency \n                 0.999911                  0.948344                  1.000001 \n   Shell Group.efficiency        Walmart.efficiency        Hitachi.efficiency \n                 0.999991                  1.000006                  0.968455 \n     Nippon LI.efficiency     Nippon T&T.efficiency           AT&T.efficiency \n                 1.000000                  0.884175                  0.912742 \n\n\n\nLa eficiencia se incrementa debido a la incertidumbre en los datos"
+  },
+  {
+    "objectID": "slides.html#el-paquete-deaci",
+    "href": "slides.html#el-paquete-deaci",
+    "title": "",
+    "section": "El paquete deaCI",
+    "text": "El paquete deaCI\n\nDisponible en github: github.com/vjbolos/deaCI\nNo hay inputs (todos son 1).\nLos outputs son indicadores compuestos con estructura jerárquica.\nBasado en (Shen et al. 2013)."
+  },
+  {
+    "objectID": "slides.html#ejemplo-2",
+    "href": "slides.html#ejemplo-2",
+    "title": "",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n\nAsume que los indicadores compuestos están definidos a partir de subindicadores"
+  },
+  {
+    "objectID": "slides.html#ejemplo-3",
+    "href": "slides.html#ejemplo-3",
+    "title": "",
+    "section": "Ejemplo",
+    "text": "Ejemplo\n\n\n\n\nlibrary(deaCI)\ndata(\"Shen2013\")\nlayer_list &lt;- list( # Definimos la jerarquía de indicadores\n  layer2 = list(\n    I1 = c(1L),\n    I2 = c(2L),\n    Mean_Speed = c(3L, 4L, 5L),\n    Speed_Limit = c(6L, 7L, 8L),\n    Seat_Belt = c(9L, 10L),\n    Child_Restraint = c(11L)\n  ),\n  layer3 = list(\n    Alcohol = c(1L, 2L),\n    Speed = c(3L, 4L),\n    Protective_System = c(5L, 6L)\n  )\n)\nresult &lt;- model_multilayer(data_indicators = Shen2013, layer_list = layer_list)\nCI(result)\n\n       AT        BE        FI        FR        HU        IE        LT        NL \n0.9353244 0.8287176 0.9254533 0.8654247 0.7279373 0.8632608 0.8456677 1.0000000 \n       PL        PT        SI        SE        CH \n0.8058592 0.8347257 0.6788238 1.0000000 1.0000000 \n\n\n\n\n\nIV Congreso & XV Jornadas de Usuarios de R · 2025"
+  }
+]

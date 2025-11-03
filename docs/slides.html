@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="slides_files/libs/clipboard/clipboard.min.js"></script>
-<script src="slides_files/libs/quarto-html/tabby.min.js"></script>
-<script src="slides_files/libs/quarto-html/popper.min.js"></script>
-<script src="slides_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="slides_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="slides_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="slides_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="slides_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-html/tabby.min.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.551">
 
   <title>slides</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -94,11 +94,11 @@
     code span.vs { color: #008000; } /* VerbatimString */
     code span.wa { color: #696969; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="slides_files/libs/revealjs/dist/theme/quarto.css">
-  <link href="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="slides_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="slides_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
+  <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -384,8 +384,8 @@
       margin-right: 0; 
     }
   </style>
-  <script src="slides_files/libs/kePrint-0.0.1/kePrint.js"></script>
-  <link href="slides_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+  <script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+  <link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -482,9 +482,9 @@ Universitat de València
 <div class="tab-content">
 <div id="tabset-1-1">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href=""></a><span class="fu">library</span>(deaR)</span>
-<span id="cb1-2"><a href=""></a><span class="fu">data</span>(Fortune500)</span>
-<span id="cb1-3"><a href=""></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(Fortune500))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(deaR)</span>
+<span id="cb1-2"><a></a><span class="fu">data</span>(Fortune500)</span>
+<span id="cb1-3"><a></a>knitr<span class="sc">::</span><span class="fu">kable</span>(<span class="fu">head</span>(Fortune500))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table>
 <thead>
@@ -553,12 +553,12 @@ Universitat de València
 </div>
 <div id="tabset-1-2">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href=""></a><span class="co"># Creamos objeto dea data</span></span>
-<span id="cb2-2"><a href=""></a>datadea <span class="ot">&lt;-</span> <span class="fu">make_deadata</span>(Fortune500, <span class="at">ni =</span> <span class="dv">3</span>, <span class="at">no =</span> <span class="dv">2</span>)</span>
-<span id="cb2-3"><a href=""></a><span class="co"># Corremos el modelo (CCR, IO)</span></span>
-<span id="cb2-4"><a href=""></a>results <span class="ot">&lt;-</span> <span class="fu">model_basic</span>(datadea, <span class="at">orientation =</span> <span class="st">"io"</span>, <span class="at">rts =</span> <span class="st">"crs"</span>)</span>
-<span id="cb2-5"><a href=""></a><span class="co">#Obtenemos eficiencias</span></span>
-<span id="cb2-6"><a href=""></a><span class="fu">efficiencies</span>(results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="co"># Creamos objeto dea data</span></span>
+<span id="cb2-2"><a></a>datadea <span class="ot">&lt;-</span> <span class="fu">make_deadata</span>(Fortune500, <span class="at">ni =</span> <span class="dv">3</span>, <span class="at">no =</span> <span class="dv">2</span>)</span>
+<span id="cb2-3"><a></a><span class="co"># Corremos el modelo (CCR, IO)</span></span>
+<span id="cb2-4"><a></a>results <span class="ot">&lt;-</span> <span class="fu">model_basic</span>(datadea, <span class="at">orientation =</span> <span class="st">"io"</span>, <span class="at">rts =</span> <span class="st">"crs"</span>)</span>
+<span id="cb2-5"><a></a><span class="co">#Obtenemos eficiencias</span></span>
+<span id="cb2-6"><a></a><span class="fu">efficiencies</span>(results)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    Mitsubishi         Mitsui         Itochu General Motors       Sumitomo 
      0.6628317      1.0000000      1.0000000      1.0000000      1.0000000 
@@ -1223,13 +1223,13 @@ Universitat de València
 <li>Asumiremos ahora que la desv. típica de los 3 inputs son el 0.1% del valor de los inputs</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href=""></a><span class="fu">library</span>(SdeaR)</span>
-<span id="cb4-2"><a href=""></a>var_input <span class="ot">&lt;-</span> <span class="fu">t</span>(Fortune500[,<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="fl">1e6</span>)</span>
-<span id="cb4-3"><a href=""></a>deadata_det <span class="ot">&lt;-</span> <span class="fu">make_deadata</span>(Fortune500, <span class="at">ni =</span> <span class="dv">3</span>, <span class="at">no =</span> <span class="dv">2</span>)</span>
-<span id="cb4-4"><a href=""></a>deadata_stoch <span class="ot">&lt;-</span> <span class="fu">make_deadata_stoch</span>(deadata_det, </span>
-<span id="cb4-5"><a href=""></a>                                    <span class="at">var_input =</span> var_input)</span>
-<span id="cb4-6"><a href=""></a>CCR_stoch <span class="ot">&lt;-</span> <span class="fu">modelstoch_radial</span>(deadata_stoch)</span>
-<span id="cb4-7"><a href=""></a><span class="fu">efficiencies</span>(CCR_stoch)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">library</span>(SdeaR)</span>
+<span id="cb4-2"><a></a>var_input <span class="ot">&lt;-</span> <span class="fu">t</span>(Fortune500[,<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]<span class="sc">^</span><span class="dv">2</span><span class="sc">/</span><span class="fl">1e6</span>)</span>
+<span id="cb4-3"><a></a>deadata_det <span class="ot">&lt;-</span> <span class="fu">make_deadata</span>(Fortune500, <span class="at">ni =</span> <span class="dv">3</span>, <span class="at">no =</span> <span class="dv">2</span>)</span>
+<span id="cb4-4"><a></a>deadata_stoch <span class="ot">&lt;-</span> <span class="fu">make_deadata_stoch</span>(deadata_det, </span>
+<span id="cb4-5"><a></a>                                    <span class="at">var_input =</span> var_input)</span>
+<span id="cb4-6"><a></a>CCR_stoch <span class="ot">&lt;-</span> <span class="fu">modelstoch_radial</span>(deadata_stoch)</span>
+<span id="cb4-7"><a></a><span class="fu">efficiencies</span>(CCR_stoch)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    Mitsubishi.efficiency         Mitsui.efficiency         Itochu.efficiency 
                  0.952345                  1.000000                  1.000000 
@@ -1274,25 +1274,25 @@ height: 600px;
 </style>
 </div>
 <div class="cell my_class1">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r my_class1 number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href=""></a><span class="fu">library</span>(deaCI)</span>
-<span id="cb6-2"><a href=""></a><span class="fu">data</span>(<span class="st">"Shen2013"</span>)</span>
-<span id="cb6-3"><a href=""></a>layer_list <span class="ot">&lt;-</span> <span class="fu">list</span>( <span class="co"># Definimos la jerarquía de indicadores</span></span>
-<span id="cb6-4"><a href=""></a>  <span class="at">layer2 =</span> <span class="fu">list</span>(</span>
-<span id="cb6-5"><a href=""></a>    <span class="at">I1 =</span> <span class="fu">c</span>(<span class="dv">1</span>L),</span>
-<span id="cb6-6"><a href=""></a>    <span class="at">I2 =</span> <span class="fu">c</span>(<span class="dv">2</span>L),</span>
-<span id="cb6-7"><a href=""></a>    <span class="at">Mean_Speed =</span> <span class="fu">c</span>(<span class="dv">3</span>L, <span class="dv">4</span>L, <span class="dv">5</span>L),</span>
-<span id="cb6-8"><a href=""></a>    <span class="at">Speed_Limit =</span> <span class="fu">c</span>(<span class="dv">6</span>L, <span class="dv">7</span>L, <span class="dv">8</span>L),</span>
-<span id="cb6-9"><a href=""></a>    <span class="at">Seat_Belt =</span> <span class="fu">c</span>(<span class="dv">9</span>L, <span class="dv">10</span>L),</span>
-<span id="cb6-10"><a href=""></a>    <span class="at">Child_Restraint =</span> <span class="fu">c</span>(<span class="dv">11</span>L)</span>
-<span id="cb6-11"><a href=""></a>  ),</span>
-<span id="cb6-12"><a href=""></a>  <span class="at">layer3 =</span> <span class="fu">list</span>(</span>
-<span id="cb6-13"><a href=""></a>    <span class="at">Alcohol =</span> <span class="fu">c</span>(<span class="dv">1</span>L, <span class="dv">2</span>L),</span>
-<span id="cb6-14"><a href=""></a>    <span class="at">Speed =</span> <span class="fu">c</span>(<span class="dv">3</span>L, <span class="dv">4</span>L),</span>
-<span id="cb6-15"><a href=""></a>    <span class="at">Protective_System =</span> <span class="fu">c</span>(<span class="dv">5</span>L, <span class="dv">6</span>L)</span>
-<span id="cb6-16"><a href=""></a>  )</span>
-<span id="cb6-17"><a href=""></a>)</span>
-<span id="cb6-18"><a href=""></a>result <span class="ot">&lt;-</span> <span class="fu">model_multilayer</span>(<span class="at">data_indicators =</span> Shen2013, <span class="at">layer_list =</span> layer_list)</span>
-<span id="cb6-19"><a href=""></a><span class="fu">CI</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r my_class1 number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">library</span>(deaCI)</span>
+<span id="cb6-2"><a></a><span class="fu">data</span>(<span class="st">"Shen2013"</span>)</span>
+<span id="cb6-3"><a></a>layer_list <span class="ot">&lt;-</span> <span class="fu">list</span>( <span class="co"># Definimos la jerarquía de indicadores</span></span>
+<span id="cb6-4"><a></a>  <span class="at">layer2 =</span> <span class="fu">list</span>(</span>
+<span id="cb6-5"><a></a>    <span class="at">I1 =</span> <span class="fu">c</span>(<span class="dv">1</span>L),</span>
+<span id="cb6-6"><a></a>    <span class="at">I2 =</span> <span class="fu">c</span>(<span class="dv">2</span>L),</span>
+<span id="cb6-7"><a></a>    <span class="at">Mean_Speed =</span> <span class="fu">c</span>(<span class="dv">3</span>L, <span class="dv">4</span>L, <span class="dv">5</span>L),</span>
+<span id="cb6-8"><a></a>    <span class="at">Speed_Limit =</span> <span class="fu">c</span>(<span class="dv">6</span>L, <span class="dv">7</span>L, <span class="dv">8</span>L),</span>
+<span id="cb6-9"><a></a>    <span class="at">Seat_Belt =</span> <span class="fu">c</span>(<span class="dv">9</span>L, <span class="dv">10</span>L),</span>
+<span id="cb6-10"><a></a>    <span class="at">Child_Restraint =</span> <span class="fu">c</span>(<span class="dv">11</span>L)</span>
+<span id="cb6-11"><a></a>  ),</span>
+<span id="cb6-12"><a></a>  <span class="at">layer3 =</span> <span class="fu">list</span>(</span>
+<span id="cb6-13"><a></a>    <span class="at">Alcohol =</span> <span class="fu">c</span>(<span class="dv">1</span>L, <span class="dv">2</span>L),</span>
+<span id="cb6-14"><a></a>    <span class="at">Speed =</span> <span class="fu">c</span>(<span class="dv">3</span>L, <span class="dv">4</span>L),</span>
+<span id="cb6-15"><a></a>    <span class="at">Protective_System =</span> <span class="fu">c</span>(<span class="dv">5</span>L, <span class="dv">6</span>L)</span>
+<span id="cb6-16"><a></a>  )</span>
+<span id="cb6-17"><a></a>)</span>
+<span id="cb6-18"><a></a>result <span class="ot">&lt;-</span> <span class="fu">model_multilayer</span>(<span class="at">data_indicators =</span> Shen2013, <span class="at">layer_list =</span> layer_list)</span>
+<span id="cb6-19"><a></a><span class="fu">CI</span>(result)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>       AT        BE        FI        FR        HU        IE        LT        NL 
 0.9353244 0.8287176 0.9254533 0.8654247 0.7279373 0.8632608 0.8456677 1.0000000 
@@ -1300,6 +1300,7 @@ height: 600px;
 0.8058592 0.8347257 0.6788238 1.0000000 1.0000000 </code></pre>
 </div>
 </div>
+
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p>IV Congreso &amp; XV Jornadas de Usuarios de R · 2025</p>
@@ -1310,19 +1311,19 @@ height: 600px;
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="slides_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="site_libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="slides_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="site_libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="slides_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="slides_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="site_libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
