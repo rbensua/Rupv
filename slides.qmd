@@ -28,7 +28,7 @@ execute:
 <h3>Universitat de València</h3>
 <br>
 
-<h3> `r fontawesome::fa("github", "black")` &nbsp; [github.com/rbensua/Rupv](https://github.com/jthomasmock/arrow-dplyr)
+<h3> `r fontawesome::fa("github", "black")` &nbsp; [github.com/rbensua/Rupv](https://rbensua.github.io/Rupv/slides.html#/)
 
 ![](deaRsticker.png){.absolute top=625 left=1300 width="350"}
 
@@ -225,13 +225,43 @@ result <- model_multilayer(data_indicators = Shen2013, layer_list = layer_list)
 CI(result)
 ```
 
+## Publicaciones
+
+* Bolós, V. J., Benítez, R., & Coll-Serrano, V. (2025). *deaR: Conventional and fuzzy DEA models with R.* SoftwareX, 31, 102266. doi:10.1016/j.softx.2025.102266 ([sciencedirect.com][1])
+* Bolós, V. J., Benítez, R., & Coll-Serrano, V. (2025). *Conventional and fuzzy data envelopment analysis with deaR.* arXiv 2506.03766. [https://arxiv.org/abs/2506.03766](https://arxiv.org/abs/2506.03766) ([uv.es][2])
+* Bolós, V. J., Benítez, R., & Coll-Serrano, V. (2025). *A new family of models with generalized orientation in data envelopment analysis.* International Transactions in Operational Research. doi:10.1111/itor.70063 ([onlinelibrary.wiley.com][3])
+* Bolós, V. J., Benítez, R., & Coll-Serrano, V. (2024). *Chance constrained directional models in stochastic data envelopment analysis.* Operations Research Perspectives, 12, 100307. doi:10.1016/j.orp.2024.100307 ([IDEAS/RePEc][4])
+* Bolós, V. J., Benítez, R., & Coll-Serrano, V. (2023). *Continuous models combining slacks-based measures of efficiency and super-efficiency.* Central European Journal of Operations Research, 31, 363-391. doi:10.1007/s10100-022-00813-5 ([SpringerLink][5])
+* Benítez, R., Coll-Serrano, V., & Bolós, V. J. (2021). *deaR-Shiny: An Interactive Web App for Data Envelopment Analysis.* Sustainability, 13(12), 6774. doi:10.3390/su13126774 ([mdpi.com][6])
+
+[1]: https://www.sciencedirect.com/science/article/pii/S235271102500233X?utm_source=chatgpt.com "deaR: Conventional and fuzzy DEA models with R"
+[2]: https://www.uv.es/vbolos/investigacion/publicaciones.html?utm_source=chatgpt.com "Investigación - Publicaciones"
+[3]: https://onlinelibrary.wiley.com/doi/10.1111/itor.70063?af=R&utm_source=chatgpt.com "A new family of models with generalized orientation in data ..."
+[4]: https://ideas.repec.org/a/eee/oprepe/v12y2024ics2214716024000113.html?utm_source=chatgpt.com "Chance constrained directional models in stochastic data ..."
+[5]: https://link.springer.com/article/10.1007/s10100-022-00813-5?utm_source=chatgpt.com "Continuous models combining slacks-based measures of ..."
+[6]: https://www.mdpi.com/2071-1050/13/12/6774?utm_source=chatgpt.com "deaR-Shiny: An Interactive Web App for Data Envelopment ..."
 
 
 
 
 
+---
 
+<div style="text-align: center; font-size: 2em; margin-top: 2em;">
+✨ **¡Muchas gracias por su atención!** ✨  
+</div>
 
+<br>
+
+<div style="text-align: center; font-size: 1.2em; color: #555;">
+Rafael Benítez, Vicente J. Bolós — Universidad de Valencia  
+<small><i>Departamento de Matemáticas para la Economía y la Empresa</i></small>
+</div>
+
+<div style="text-align: center; font-size: 1.2em; color: #555;">
+Vicente Coll — Universidad de Valencia  
+<small><i>Departamento de Economía Aplicada</i></small>
+</div>
 
 
 
