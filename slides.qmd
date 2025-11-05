@@ -130,8 +130,8 @@ res_sum |> knitr::kable() |> kableExtra::kable_styling("striped", full_width = F
 
 <iframe 
   src="https://rbensua.shinyapps.io/deaR" 
-  width="500%" 
-  height="600px" 
+  width="1900px" 
+  height="800px" 
   style="border:none;"
   allowfullscreen>
 </iframe>
