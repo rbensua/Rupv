@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="779.96558"
+   height="474.12482"
+   viewBox="0 0 779.96558 474.12482"
+   version="1.1"
+   id="svg66"
+   sodipodi:docname="DEA_frontier.svg"
+   inkscape:version="1.2.2 (b0a8486541, 2022-12-01)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview68"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     showgrid="false"
+     inkscape:zoom="0.71833333"
+     inkscape:cx="760.09281"
+     inkscape:cy="193.50348"
+     inkscape:window-width="1920"
+     inkscape:window-height="1048"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg66" />
+  <!-- Background -->
+  <!-- Axes -->
+  <!-- Arrowhead definition -->
+  <defs
+     id="defs14">
+    <marker
+       id="arrowHead"
+       markerWidth="10"
+       markerHeight="10"
+       refX="9"
+       refY="5"
+       orient="auto">
+      <path
+         d="M 0,0 10,5 0,10 Z"
+         fill="#000000"
+         id="path8" />
+    </marker>
+    <marker
+       id="dot"
+       markerWidth="6"
+       markerHeight="6"
+       refX="3"
+       refY="3">
+      <circle
+         cx="3"
+         cy="3"
+         r="3"
+         fill="#000000"
+         id="circle11" />
+    </marker>
+  </defs>
+  <!-- Axis labels -->
+  <!-- Dotted diagonal reference line -->
+  <!-- Efficiency frontier (solid thick polyline) -->
+  <!-- Points for the frontier: E(180,140), D(240,220), A(420,300), C(720,520) but reduced to fit coordinates -->
+  <!-- Small flat end segment for C as in the original -->
+  <!-- Frontier nodes (solid small rectangles/circles) -->
+  <!-- E -->
+  <!-- D -->
+  <!-- A -->
+  <!-- C -->
+  <!-- Label letters near frontier and other points -->
+  <!-- Other non-frontier points B, G, P (approx positions) -->
+  <!-- B, above frontier -->
+  <!-- G, right of frontier -->
+  <!-- P, near A on dashed line intersection -->
+  <!-- Small filled dot near A to mimic the original (slightly offset) -->
+  <!-- "Efficiency Frontier" annotation with arrow pointing to the frontier path -->
+  <!-- Make axes origin O mark -->
+  <!-- A light border so inkscape displays nicely -->
+  <rect
+     x="-41.005398"
+     y="-75.031921"
+     width="896"
+     height="596"
+     fill="none"
+     stroke="none"
+     id="rect64" />
+  <g
+     id="g1730"
+     transform="translate(-43.005398,-77.031921)">
+    <g
+       id="g1701">
+      <line
+         x1="72.811111"
+         y1="520"
+         x2="819.97095"
+         y2="520"
+         stroke="#000000"
+         stroke-width="3"
+         marker-end="url(#arrowHead)"
+         id="line4" />
+      <line
+         x1="80"
+         y1="524.7132"
+         x2="80"
+         y2="80.031921"
+         stroke="#000000"
+         stroke-width="3"
+         marker-end="url(#arrowHead)"
+         id="line6" />
+      <text
+         x="361.30759"
+         y="547.83643"
+         font-family="Arial"
+         font-size="16px"
+         id="text16">kWh/kg N removed</text>
+      <text
+         x="-366.80219"
+         y="54.599148"
+         font-family="Arial"
+         font-size="16px"
+         transform="rotate(-90)"
+         id="text18">kWh/kg COD removed</text>
+      <path
+         d="m 180,160 1.07415,80 48.73353,77.95727 216.12239,123.53862 h 249.34814"
+         stroke="#000000"
+         stroke-width="6"
+         fill="none"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         id="path22"
+         sodipodi:nodetypes="ccccc" />
+      <path
+         d="m 181.56845,240.36285 48.73353,77.95727 216.12239,123.53862"
+         stroke="#000000"
+         stroke-width="6"
+         fill="none"
+         stroke-linejoin="round"
+         stroke-linecap="round"
+         id="path22-3"
+         sodipodi:nodetypes="ccc"
+         style="stroke:#00d500;stroke-opacity:1" />
+      <circle
+         cx="180.9352"
+         cy="239.64108"
+         r="6"
+         fill="#000000"
+         id="circle26" />
+      <circle
+         cx="230.08388"
+         cy="318.1304"
+         r="6"
+         fill="#000000"
+         id="circle28" />
+      <circle
+         cx="446.25412"
+         cy="441.36618"
+         r="6"
+         fill="#000000"
+         id="circle30" />
+      <circle
+         cx="307.6189"
+         cy="363.6944"
+         r="6"
+         fill="#000000"
+         id="circle32" />
+      <text
+         x="158.51097"
+         y="244.79649"
+         font-family="Arial"
+         font-size="18px"
+         id="text34">E</text>
+      <text
+         x="207.11604"
+         y="328.33063"
+         font-family="Arial"
+         font-size="18px"
+         id="text36">D</text>
+      <text
+         x="424.17725"
+         y="291.02924"
+         font-family="Arial"
+         font-size="18px"
+         id="text38">A</text>
+      <text
+         x="446.70352"
+         y="461.60751"
+         font-family="Arial"
+         font-size="18px"
+         id="text40">C</text>
+      <circle
+         cx="504.01364"
+         cy="182.33139"
+         r="6"
+         fill="#000000"
+         id="circle42" />
+      <text
+         x="511.24127"
+         y="174.71452"
+         font-family="Arial"
+         font-size="18px"
+         id="text44">B</text>
+      <circle
+         cx="585.53821"
+         cy="348.57758"
+         r="6"
+         fill="#000000"
+         id="circle46" />
+      <text
+         x="595.43262"
+         y="349.04709"
+         font-family="Arial"
+         font-size="18px"
+         id="text48">G</text>
+      <circle
+         cx="413.33322"
+         cy="290.16144"
+         r="5"
+         fill="#000000"
+         id="circle50" />
+      <text
+         x="275.70728"
+         y="373.0845"
+         font-family="Arial"
+         font-size="16px"
+         id="text52">P</text>
+      <circle
+         cx="80.434685"
+         cy="519.76129"
+         r="4"
+         fill="#000000"
+         id="circle54" />
+      <text
+         x="260.45309"
+         y="441.30731"
+         font-family="Arial"
+         font-size="18px"
+         id="text56">Efficiency</text>
+      <text
+         x="266.64282"
+         y="459.58307"
+         font-family="Arial"
+         font-size="18px"
+         id="text58">Frontier</text>
+      <path
+         d="m 308.89577,423.17448 25,-25"
+         stroke="#000000"
+         stroke-width="2"
+         marker-end="url(#arrowHead)"
+         id="path60" />
+      <text
+         x="60"
+         y="540"
+         font-family="Arial"
+         font-size="14px"
+         id="text62">O</text>
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1.7;stroke-linecap:butt;stroke-linejoin:miter;stroke-dasharray:6.8, 6.8;stroke-dashoffset:0;stroke-opacity:1"
+         d="M 82.606007,518.86079 418.40747,287.6615"
+         id="path378" />
+    </g>
+  </g>
+</svg>

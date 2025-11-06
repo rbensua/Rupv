@@ -50,8 +50,10 @@ execute:
 
 
 
+## Análisis Envolvente de datos (DEA)
 
 
+![](DEAfrontier.png){.absolute top=125 left=100 width="1000" .fragment .fade-up data-fragment-index="3"}
 
 
 ## El paquete `deaR` 
